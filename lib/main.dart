@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:quash_test/view/quash_board.dart';
 import 'package:quash_watch/quash_watch.dart';
 
-void main() {
-  QuashWatch quash = QuashWatch();
+import 'view/quash_board.dart';
 
-  FlutterError.onError = (FlutterErrorDetails details) async {
-    await quash.handleErrors();
-  };
+void main() {
+  WidgetsFlutterBinding.ensureInitialized(); // Ensure Flutter is initialized
+
+  QuashWatch quash = QuashWatch();
+  quash.handleErrors(); // Set up error handling
+
+  // Run the app by starting with the root widget (MyApp)
   runApp(MyApp());
 }
 

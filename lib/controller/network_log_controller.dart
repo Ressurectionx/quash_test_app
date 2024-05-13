@@ -11,6 +11,7 @@ class NetworkLogController {
   Future<void> hitAPI() async {
     try {
       _dio.interceptors.add(QuashNetworkWatch());
+
       await _dio.get(
         'https://weatherapi-com.p.rapidapi.com/sports.json?q=London',
         options: Options(
@@ -22,7 +23,8 @@ class NetworkLogController {
         ),
       );
       // Save the network logs using NetworkLogger method
-      // await NetworkLogger('network_logs.txt').saveLogsToFile({
+
+      // _quashWatch.saveNetworkLogs({
       //   'timestamp': DateTime.now().toIso8601String(),
       //   'url': response.requestOptions.uri.toString(),
       //   'statusCode': response.statusCode,

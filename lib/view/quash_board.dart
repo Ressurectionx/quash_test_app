@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quash_test/view/screens/app_crash_screen.dart';
-import 'package:quash_test/view/screens/network_log_screen.dart';
-import 'package:quash_test/view/screens/screen_shot_screen.dart';
+
+import 'screens/app_crash_screen.dart';
+import 'screens/network_log_screen.dart';
+import 'screens/screen_shot_screen.dart';
 
 class BottomNavigation extends StatefulWidget {
   @override

@@ -6,7 +6,7 @@ import 'package:quash_watch/quash_watch.dart';
 import '../widgets/countdown_widget.dart';
 
 class ScreenshotScreen extends StatelessWidget {
-  const ScreenshotScreen({Key? key}) : super(key: key);
+  const ScreenshotScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
